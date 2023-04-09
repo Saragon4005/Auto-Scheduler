@@ -8,23 +8,23 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\swimd\\.nuget\\packages\\": {},
+    "C:\\Users\\jacks\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\swimd\\source\\repos\\AutoScheduler\\AutoScheduler\\AutoScheduler.csproj",
+      "projectUniqueName": "C:\\Users\\jacks\\source\\repos\\SchedulerGithub\\AutoScheduler\\AutoScheduler.csproj",
       "projectName": "AutoScheduler",
-      "projectPath": "C:\\Users\\swimd\\source\\repos\\AutoScheduler\\AutoScheduler\\AutoScheduler.csproj",
-      "packagesPath": "C:\\Users\\swimd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\swimd\\source\\repos\\AutoScheduler\\AutoScheduler\\obj\\",
+      "projectPath": "C:\\Users\\jacks\\source\\repos\\SchedulerGithub\\AutoScheduler\\AutoScheduler.csproj",
+      "packagesPath": "C:\\Users\\jacks\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jacks\\source\\repos\\SchedulerGithub\\AutoScheduler\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\swimd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jacks\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,7 +33,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
