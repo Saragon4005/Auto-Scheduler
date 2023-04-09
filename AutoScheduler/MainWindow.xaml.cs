@@ -38,7 +38,7 @@ namespace AutoScheduler
 		void draw()
 		{
 			calendar.Children.Clear();
-			
+
 			for(int i = 0; i < 24; i++)
 			{
 				TextBlock t = new TextBlock()
@@ -50,6 +50,18 @@ namespace AutoScheduler
 				};
 				calendar.Children.Add(t);
 				Grid.SetRow(t, i+1);
+			}
+			for(int i = 0; i < 7; i++)
+			{
+				TextBlock t = new TextBlock()
+				{
+					Text = i.ToString() + ":00",
+					FontFamily = new FontFamily("Tahoma"),
+					HorizontalAlignment = HorizontalAlignment.Stretch,
+					VerticalAlignment = VerticalAlignment.Stretch
+				};
+				calendar.Children.Add(t);
+				Grid.SetColumn(t, i+1);
 			}
 			foreach(HardTask task in SmartCalendar.Schedule)
 			{

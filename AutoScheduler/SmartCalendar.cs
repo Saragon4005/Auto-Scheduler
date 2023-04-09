@@ -146,7 +146,13 @@ namespace AutoScheduler
         {
             this.time = time;
         }
-    }
+		public override string ToString()
+		{
+            string output = base.ToString();
+            output += "HARD" + time + "🚀";
+			return output;
+		}
+	}
     public class SoftTask : Task
     {
         public int priority;
