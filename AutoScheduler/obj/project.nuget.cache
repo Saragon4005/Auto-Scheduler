@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5HvyNjs7vpwXNQM34R1bOpziIJQjCjCE2gj6bCbDGXuw/d+DYw4unFHBg8cbcTk07nHcXoWxNC9u/jzitVbdsA==",
+  "dgSpecHash": "5dV1hYkW6Y7pX8fEoCVU4ADwSK05r3wih8ACldwCd4gtr5/UgpuxTWqYw1eRipxfjF9n3vu6L9UoLPPnsTtA2g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jacks\\source\\repos\\SchedulerGithub\\AutoScheduler\\AutoScheduler.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\swimd\\source\\repos\\Saragon4005\\Auto-Scheduler\\AutoScheduler\\AutoScheduler.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\swimd\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
   "logs": []
 }

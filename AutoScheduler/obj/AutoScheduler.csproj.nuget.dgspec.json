@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jacks\\source\\repos\\SchedulerGithub\\AutoScheduler\\AutoScheduler.csproj": {}
+    "C:\\Users\\swimd\\source\\repos\\Saragon4005\\Auto-Scheduler\\AutoScheduler\\AutoScheduler.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jacks\\source\\repos\\SchedulerGithub\\AutoScheduler\\AutoScheduler.csproj": {
+    "C:\\Users\\swimd\\source\\repos\\Saragon4005\\Auto-Scheduler\\AutoScheduler\\AutoScheduler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jacks\\source\\repos\\SchedulerGithub\\AutoScheduler\\AutoScheduler.csproj",
+        "projectUniqueName": "C:\\Users\\swimd\\source\\repos\\Saragon4005\\Auto-Scheduler\\AutoScheduler\\AutoScheduler.csproj",
         "projectName": "AutoScheduler",
-        "projectPath": "C:\\Users\\jacks\\source\\repos\\SchedulerGithub\\AutoScheduler\\AutoScheduler.csproj",
-        "packagesPath": "C:\\Users\\jacks\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jacks\\source\\repos\\SchedulerGithub\\AutoScheduler\\obj\\",
+        "projectPath": "C:\\Users\\swimd\\source\\repos\\Saragon4005\\Auto-Scheduler\\AutoScheduler\\AutoScheduler.csproj",
+        "packagesPath": "C:\\Users\\swimd\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\swimd\\source\\repos\\Saragon4005\\Auto-Scheduler\\AutoScheduler\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jacks\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\swimd\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,6 +44,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Microsoft.Xaml.Behaviors.Wpf": {
+              "target": "Package",
+              "version": "[1.1.39, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

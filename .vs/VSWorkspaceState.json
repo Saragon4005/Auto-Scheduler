@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\AutoScheduler"
   ],
-  "SelectedNode": "\\AutoScheduler.sln",
+  "SelectedNode": "\\AutoScheduler\\MainWindow.xaml",
   "PreviewInSolutionExplorer": false
 }

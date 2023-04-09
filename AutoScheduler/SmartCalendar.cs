@@ -28,6 +28,13 @@ namespace AutoScheduler
             printSchedule(Schedule);
             Console.ReadLine();
         }
+
+        public static void addNewTask(Task task)
+        {
+            TaskList.Add(task);
+			Schedule.Clear();
+			Schedule = generateList(TaskList);
+		}
         private static void printSchedule(List<HardTask> Schedule)
         {
             foreach (HardTask h in Schedule)
@@ -120,6 +127,16 @@ namespace AutoScheduler
             this.children = children;
 
         }
+
+
+        public override string ToString()
+        {
+            string output = "Task";
+			output += name + "👍";
+			output += description + "👍";
+			output += length + "🤞";
+            return output;
+		}
     }
     public class HardTask : Task
     {

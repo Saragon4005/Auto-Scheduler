@@ -9,12 +9,13 @@
     <Window.Resources>
         <ZoomPercentageConverter x:Key="ZoomPercentageConverter"/>
     </Window.Resources>
-    <Grid>
+    <Grid SnapsToDevicePixels="True">
         <Grid HorizontalAlignment="Left" Width="100" Background="#FFDADADA">
             <Grid HorizontalAlignment="Center" Width="100">
                 <Grid Height="38" VerticalAlignment="Top" HorizontalAlignment="Left">
                     <Rectangle HorizontalAlignment="Left" Height="38" Margin="64,0,0,0" VerticalAlignment="Center" Width="36"/>
                     <TextBlock x:Name="UserName" HorizontalAlignment="Left" Text="Username " VerticalAlignment="Center" Width="64" TextAlignment="Right" FontFamily="Tahoma"/>
+                    <Ellipse x:Name="ellipse" HorizontalAlignment="Center" Margin="64,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="32" Height="32"/>
                 </Grid>
                 <Path Data="M0,38 L100,38" Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="1" Margin="0,38,0,0" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="101"/>
                 <Grid HorizontalAlignment="Center" Height="41" Margin="0,39,0,0" VerticalAlignment="Top" Width="100">
@@ -23,14 +24,18 @@
             </Grid>
 
         </Grid>
-        <Grid Margin="100,0,0,0">
+        <Grid Margin="100,0,0,0" Grid.ColumnSpan="2">
             <Grid Margin="10,10,10,10">
                 <Grid Height="50" VerticalAlignment="Top">
-                    <Button Content="Button" HorizontalAlignment="Right" Width="100" FontFamily="Tahoma" FontSize="20" Margin="0,10,10,10"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="43*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Task" HorizontalAlignment="Left" Width="100" FontFamily="Tahoma" FontSize="20" Margin="320,10,0,10" Click="Button_Click_1" Grid.Column="1"/>
                 </Grid>
                 <Grid Background="#FFD2D2D2" Margin="0,55,0,0">
                     <ScrollViewer>
-                        <Grid x:Name="grid" ShowGridLines="True" ScrollViewer.CanContentScroll="True">
+                        <Grid x:Name="grid" ScrollViewer.CanContentScroll="True" Opacity="0.5">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="40"/>
                                 <ColumnDefinition Width="100*"/>
@@ -71,6 +76,68 @@
                         </Grid>
                     </ScrollViewer>
                 </Grid>
+            </Grid>
+            <Grid HorizontalAlignment="Center" Height="320" VerticalAlignment="Center" Width="305" Background="#FFFBC6C6" d:IsHidden="True">
+                <TextBox Margin="85,56,0,0" TextWrapping="Wrap" Text="New Task" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="14" SelectionTextBrush="White" Background="#FFFF8E8E" BorderBrush="#FFFF8E8E" HorizontalAlignment="Left" Width="210"/>
+                <TextBox Margin="85,80,0,0" TextWrapping="Wrap" Text="This is a Blank Task" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="14" SelectionTextBrush="White" Background="#FFFF8E8E" BorderBrush="#FFFF8E8E" Height="69.6" HorizontalAlignment="Left" Width="210" TextChanged="TextBox_TextChanged"/>
+                <TextBox HorizontalAlignment="Left" Margin="85,160,0,0" TextWrapping="Wrap" Text="14:20" VerticalAlignment="Top" Width="210" FontFamily="Tahoma" FontSize="14" SelectionTextBrush="White" Background="#FFFF8E8E" BorderBrush="#FFFF8E8E"/>
+                <TextBox HorizontalAlignment="Left" Margin="85,184,0,0" TextWrapping="Wrap" Text="2:40" VerticalAlignment="Top" Width="210" FontFamily="Tahoma" FontSize="14" SelectionTextBrush="White" Background="#FFFF8E8E" BorderBrush="#FFFF8E8E"/>
+                <TextBox Margin="85,208,10,0" TextWrapping="Wrap" Text="4/10/23" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="14" SelectionTextBrush="White" Background="#FFFF8E8E" BorderBrush="#FFFF8E8E" RenderTransformOrigin="0.5,0.5">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="2.315"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="-0.382"/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+                <TextBlock HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="New Task" VerticalAlignment="Top" Width="252" FontFamily="Tahoma" FontSize="24" TextAlignment="Center" Margin="0,5,0,0"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Tahoma" Text="Name: " Width="75"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Tahoma" Text="Description: " Width="75"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Tahoma" Text="Start Time" Width="75"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Tahoma" Text="Length" Width="75"/>
+                <Button Content="Create Task" HorizontalAlignment="Center" Height="40" VerticalAlignment="Bottom" Width="150" FontSize="20" FontFamily="Tahoma" Click="Button_Click" Margin="0,0,0,10"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Tahoma" Width="75" Text="Date"/>
+                <Button Content="  Use AI&#xD;&#xA;Scheduling" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Tahoma" Click="Button_Click_2"/>
+            </Grid>
+            <Grid HorizontalAlignment="Center" Height="320" VerticalAlignment="Center" Width="305" Background="#FFC6DAFB">
+                <TextBox Margin="85,56,0,0" TextWrapping="Wrap" Text="New Task" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="14" SelectionTextBrush="White" Background="#FF8E9DFF" BorderBrush="#FF8E9DFF" HorizontalAlignment="Left" Width="210"/>
+                <TextBox Margin="85,80,0,0" TextWrapping="Wrap" Text="This is a Blank Task" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="14" SelectionTextBrush="White" Background="#FF8E9DFF" BorderBrush="#FF8E9DFF" Height="69.6" HorizontalAlignment="Left" Width="210" TextChanged="TextBox_TextChanged"/>
+                <TextBox x:Name="Enter_Value__0___5_" HorizontalAlignment="Left" Margin="85,155,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="210" FontFamily="Tahoma" FontSize="14" SelectionTextBrush="White" Background="#FF8E9DFF" BorderBrush="#FF8E9DFF" TextChanged="TextBox_TextChanged_1"/>
+                <TextBox HorizontalAlignment="Left" Margin="85,184,0,0" TextWrapping="Wrap" Text="2:40" VerticalAlignment="Top" Width="210" FontFamily="Tahoma" FontSize="14" SelectionTextBrush="White" Background="#FF8E9DFF" BorderBrush="#FF8E9DFF"/>
+                <TextBox Margin="85,208,10,0" TextWrapping="Wrap" Text="4/10/23" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="14" SelectionTextBrush="White" Background="#FF8E9DFF" BorderBrush="#FF8E9DFF" RenderTransformOrigin="0.5,0.5">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="2.315"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="-0.382"/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+                <Grid HorizontalAlignment="Center" Height="33" Margin="0,232,0,0" VerticalAlignment="Top" Width="285" UseLayoutRounding="True">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Height="17" Grid.Row="1" TextWrapping="Wrap" Text="2:40&#xA;" Background="#FF8E9DFF" BorderBrush="#FF8E9DFF" Margin="20,0,20,0"/>
+                    <TextBox Grid.Column="1" Height="17" Grid.Row="1" TextWrapping="Wrap" Text="2:40&#xA;" Background="#FF8E9DFF" BorderBrush="#FF8E9DFF" Margin="20,0,20,0"/>
+                    <TextBlock HorizontalAlignment="Center" Height="17" TextWrapping="Wrap" VerticalAlignment="Center"><Run Text="Earliest Time"/><LineBreak/><Run/></TextBlock>
+                    <TextBlock Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Text="Latest Time"/>
+                </Grid>
+                <TextBlock HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="New Task" VerticalAlignment="Top" Width="252" FontFamily="Tahoma" FontSize="24" TextAlignment="Center" Margin="0,5,0,0"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Tahoma" Text="Name: " Width="75"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Tahoma" Text="Description: " Width="75"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Tahoma" Text="Priority" Width="75" ToolTip="The Priority Score helps the AI rank your tasks in terms of importance and uses it to help schedule your tasks throughout your day."/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Tahoma" Text="Length" Width="75"/>
+                <Button Content="Create Task" HorizontalAlignment="Center" Height="40" VerticalAlignment="Bottom" Width="150" FontSize="20" FontFamily="Tahoma" Click="Button_Click" Margin="0,0,0,10"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Tahoma" Width="75" Text="Date"/>
+                <Button Content="     Set &#xD;&#xA;Scheduling" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Tahoma" Click="Button_Click_2"/>
             </Grid>
         </Grid>
     </Grid>
