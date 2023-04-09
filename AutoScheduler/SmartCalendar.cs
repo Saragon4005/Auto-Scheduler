@@ -14,6 +14,7 @@ namespace AutoScheduler
 
         public static void Pain(string[] args)
         {
+            //JJACKSON HAS ADDED A COMMENTO WOOOOO
             Console.WriteLine("Starting");
             HardTask Badminton = new HardTask("Badminton", "Going to Badminton", 40, null, new DateTime(2023, 4, 9, 14, 30, 0));
             HardTask Hockey = new HardTask("Hockey", "Going to Hockey", 60, null, new DateTime(2023, 4, 9, 15, 30, 0));
